@@ -1,0 +1,5 @@
+// View GPU utilization
+nvidia-smi dmon
+
+// Run GPU accelerated jupyter with persistent storage
+docker run -v jupyter-volume:/tf --gpus all -it -p 8888:8888 tensorflow/tensorflow:latest-gpu-jupyter
